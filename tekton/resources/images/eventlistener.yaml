@@ -3,7 +3,7 @@ kind: EventListener
 metadata:
   name: image-builder
 spec:
-  serviceAccountName: release-right-meow
+  serviceAccountName: tekton-test-nightly
   triggers:
     - name: single-arch-build-trigger
       interceptors:

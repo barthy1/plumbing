@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: image-build-cron-trigger
 spec:
-  schedule: "0 2 * * *"
+  schedule: "*/5 * * * *"
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
@@ -19,7 +19,7 @@ spec:
             - name: GIT_REVISION
               value: master
             - name: TARGET_IMAGE
-              value: gcr.io/tekton-releases/dogfooding/tkn:latest
+              value: gcr.io/s390x-test/tekton-releases/dogfooding/tkn:latest
             - name: CONTEXT_PATH
               value: tekton/images/tkn
             - name: PLATFORMS
