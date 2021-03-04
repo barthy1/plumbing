@@ -31,7 +31,7 @@ spec:
     - name: REPO_ROOT_DIR
       value: $(workspaces.source-code.path)/src/$(params.package)
     - name: GOPATH
-      value: /workspace
+      value: $(workspaces.source-code.path)
     - name: KUBECONFIG
       value: $(workspaces.k8s-shared.path)/config
     - name: TEST_CLIENT_BINARY

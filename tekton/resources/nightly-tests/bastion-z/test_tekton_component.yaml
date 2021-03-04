@@ -35,7 +35,7 @@ spec:
     - name: REPO_ROOT_DIR
       value: $(workspaces.source-code.path)/src/$(params.package)
     - name: GOPATH
-      value: /workspace
+      value: $(workspaces.source-code.path)
     - name: KO_DOCKER_REPO
       value: $(params.container-registry)
     - name: TEST_RUNTIME_ARCH

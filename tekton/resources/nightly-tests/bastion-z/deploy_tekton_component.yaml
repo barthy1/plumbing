@@ -22,8 +22,6 @@ spec:
     workingdir: $(workspaces.source-code.path)/src/$(params.package)
     image: gcr.io/tekton-releases/dogfooding/test-runner:latest
     env:
-    - name: GOPATH
-      value: /workspace
     - name: KO_DOCKER_REPO
       value: $(params.container-registry)
     - name: KUBECONFIG
